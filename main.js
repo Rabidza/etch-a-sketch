@@ -22,7 +22,7 @@ function createGrid(sides = 16){
     grid.className = "grid";
     grid.display = grid;
     grid.style.backgroundColor = "whitesmoke";
-    grid.style.filter = "brightness(150%)"
+    grid.style.filter = "brightness(100%)"
     grid.addEventListener('mouseover', setColor);
     container.appendChild(grid);
   }
@@ -36,7 +36,7 @@ function setColor(){
   else{
     let brightness = parseInt(this.style.filter.match(/\d+/));
     if (brightness != 0){
-      this.style.filter = `brightness(${brightness-15}%)`;
+      this.style.filter = `brightness(${brightness-10}%)`;
     }
   }
 }

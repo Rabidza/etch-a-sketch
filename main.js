@@ -41,12 +41,10 @@ function setColor(){
   }
 }
 
-// Generate a random color from a defined palette
+// Generate a random color
 function randomColour(){
-  const palette = ["#EF1013","#82EF10","#10EFEC","#7D10EF"];
-  let randomNum = Math.floor(Math.random(1,4) * 4);
-  let boxColor = palette[randomNum];
-  return boxColor;
+  let color = Math.floor(0x1000000 * Math.random()).toString(16);
+  return '#' + ('000000' + color).slice(-6);
 }
 
 // Create new grid based on input from the user
